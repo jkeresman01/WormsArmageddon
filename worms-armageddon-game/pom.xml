@@ -10,8 +10,7 @@
     <artifactId>worms-armageddon-game</artifactId>
     <packaging>jar</packaging>
 
-    <name>worms-armageddon-engine</name>
-    <url>http://maven.apache.org</url>
+    <name>worms-armageddon-game</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,6 +32,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
+            <version>21.0.6</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
             <version>21.0.6</version>
             <scope>compile</scope>
         </dependency>
