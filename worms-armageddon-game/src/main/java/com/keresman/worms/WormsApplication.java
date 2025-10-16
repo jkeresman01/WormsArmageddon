@@ -1,24 +1,28 @@
 package com.keresman.worms;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.keresman.worms.utility.FXMLUtils.loadScene;
+
 public class WormsApplication extends Application {
+
+    private static final String VIEW_SPLASH_SCREEN_VIEW_FXML = "view/splash-screen-view.fxml";
+    private static final String WORMS_ARMAGEDDON = "Worms Armageddon";
 
     private static final int SCENE_WIDTH = 400;
     private static final int SCENE_HEIGHT = 200;
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(WormsApplication.class.getResource("view/splash-screen-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), SCENE_WIDTH, SCENE_HEIGHT);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+        loadScene(stage,
+                VIEW_SPLASH_SCREEN_VIEW_FXML,
+                SCENE_WIDTH,
+                SCENE_HEIGHT,
+                WORMS_ARMAGEDDON,
+                WormsApplication.class);
     }
 
     public static void main(String[] args) {
