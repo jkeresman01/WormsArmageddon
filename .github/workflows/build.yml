@@ -1,0 +1,36 @@
+name: Build Worms Armageddon
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Build with Maven
+        run: mvn -B clean install
+
+      - name: Package JavaFX game jar
+        run: mvn -pl worms-armageddon-game package
+
+      # Upload built jar as an artifact
+      - name: Upload game jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: worms-armageddon-game
+          path: worms-armageddon-game/target/*.jar
+
