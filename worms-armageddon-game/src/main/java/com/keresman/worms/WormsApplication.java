@@ -9,7 +9,7 @@ import static com.keresman.worms.utility.FXMLUtils.loadScene;
 
 public class WormsApplication extends Application {
 
-    private static final String VIEW_SPLASH_SCREEN_VIEW_FXML = "view/splash-screen-view.fxml";
+    private static final String SPLASH_SCREEN_VIEW_PATH = "view/splash-screen-view.fxml";
     private static final String WORMS_ARMAGEDDON = "Worms Armageddon";
 
     private static final int SCENE_WIDTH = 400;
@@ -18,7 +18,7 @@ public class WormsApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         loadScene(stage,
-                VIEW_SPLASH_SCREEN_VIEW_FXML,
+                SPLASH_SCREEN_VIEW_PATH,
                 SCENE_WIDTH,
                 SCENE_HEIGHT,
                 WORMS_ARMAGEDDON,
