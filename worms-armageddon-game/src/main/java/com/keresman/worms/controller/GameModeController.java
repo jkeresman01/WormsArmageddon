@@ -1,4 +1,4 @@
 package com.keresman.worms.controller;
 
-public class GameModeContoller {
+public class GameModeController {
 }
