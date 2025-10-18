@@ -24,11 +24,9 @@ public final class FXMLUtils {
                                  Class<?> rootClass) throws IOException {
         FXMLLoader loader = FXMLLoaderFactory.create(fxmlPath, rootClass);
         Parent root = loader.load();
-
         Scene scene = new Scene(root, width, height);
         stage.setTitle(title);
         stage.setScene(scene);
-
         stage.show();
     }
 

@@ -5,7 +5,7 @@ import javafx.application.Platform;
 
 public class ClockThread extends Thread {
 
-    private static final int SLEEP_TIME_MS = 1_000;
+    private static final int SLEEP_TIME_MS = 1000;
 
     private volatile boolean isRunning = true;
     private final TimeUpdatable timeUpdatable;
