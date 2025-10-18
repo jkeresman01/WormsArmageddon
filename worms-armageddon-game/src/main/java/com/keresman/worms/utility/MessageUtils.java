@@ -11,7 +11,6 @@ public final class MessageUtils {
     public static void showInfoMessage(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("INFO");
-        alert.setHeaderText(message);
         alert.setContentText(message);
         alert.show();
     }
@@ -19,7 +18,6 @@ public final class MessageUtils {
     public static void showWarningMessage(String message) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("WARNING");
-        alert.setHeaderText(message);
         alert.setContentText(message);
         alert.show();
     }
@@ -28,7 +26,6 @@ public final class MessageUtils {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("ERROR");
         alert.setHeaderText(message);
-        alert.setContentText(message);
         alert.show();
     }
 }
