@@ -1,0 +1,43 @@
+name: Clean Code & Quality Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality:
+    name: Verify Clean Code Principles
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      # Checkout source
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Setup JDK (adjust version if needed)
+      - name: Setup JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      # Validate code style (Checkstyle)
+      #- name: Run Checkstyle
+      #  run: mvn checkstyle:check
+
+      # Check for code smells / design issues (PMD)
+      #- name: Run PMD
+      #  run: mvn pmd:check
+
+      # Run tests (includes ArchUnit Clean Code checks)
+      - name: Run Unit & Architecture Tests
+        run: mvn test
