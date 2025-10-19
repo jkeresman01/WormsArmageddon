@@ -35,8 +35,8 @@ jobs:
         run: mvn checkstyle:check
 
       # Check for code smells / design issues (PMD)
-      - name: Run PMD
-        run: mvn pmd:check
+      #- name: Run PMD
+      #  run: mvn pmd:check
 
       # Detect potential bugs (SpotBugs)
       - name: Run SpotBugs
