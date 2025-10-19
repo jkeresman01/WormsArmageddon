@@ -100,7 +100,7 @@
                 <configuration>
                     <printFailingErrors>true</printFailingErrors>
                     <failOnViolation>true</failOnViolation>
-                    <targetJdk>23</targetJdk>
+                    <targetJdk>21</targetJdk>
                     <rulesets>
                         <ruleset>category/java/bestpractices.xml</ruleset>
                         <ruleset>category/java/design.xml</ruleset>
