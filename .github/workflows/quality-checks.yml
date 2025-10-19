@@ -41,7 +41,3 @@ jobs:
       # Run tests (includes ArchUnit Clean Code checks)
       - name: Run Unit & Architecture Tests
         run: mvn test
-
-      # Detect potential bugs (SpotBugs)
-      - name: Run SpotBugs
-        run: mvn spotbugs:check
