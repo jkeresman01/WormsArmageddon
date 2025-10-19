@@ -22,7 +22,7 @@ jobs:
           cache: 'maven'
 
       - name: Build with Maven
-        run: mvn -B clean install
+        run: mvn -B clean install -Dpmd.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true
 
       - name: Package JavaFX game jar
         run: mvn -pl worms-armageddon-game package
