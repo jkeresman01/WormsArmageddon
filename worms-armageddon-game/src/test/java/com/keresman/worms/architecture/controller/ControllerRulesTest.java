@@ -27,6 +27,7 @@ public class ControllerRulesTest {
                     .because("Controllers should end in controller");
 
 
+    @ArchTest
     static final ArchRule controllers_should_encapsulate_fields =
             classes()
                     .that()

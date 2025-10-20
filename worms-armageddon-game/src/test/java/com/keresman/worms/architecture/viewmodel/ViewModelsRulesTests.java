@@ -25,12 +25,13 @@ public class ViewModelsRulesTests {
                     .should(beDeclaredFinal())
                     .because("Classes should be designed for inheritance or else prohibit");
 
-    static final ArchRule controllers_should_encapsulate_fields =
+    @ArchTest
+    static final ArchRule viewmodels_should_encapsulate_fields =
             classes()
                     .that()
-                    .resideInAPackage("..controller..")
+                    .resideInAPackage("..viewmodel..")
                     .should(encapsulateFields())
-                    .because("Controllers should encapsulate fields");
+                    .because("View models should encapsulate fields");
 
     private static ArchCondition<JavaClass> beDeclaredFinal() {
         return new ArchCondition<>("be declared final") {
